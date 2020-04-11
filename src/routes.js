@@ -18,5 +18,7 @@ routes.delete("/repositories/:id", (request, response) => repositoryController.r
 // Routes form likes
 routes.post("/repositories/:id/like", (request, response) => likeController.create(request, response, repositories));
 
+routes.delete("/repositories/:id/like", (request, response) => likeController.remove(request, response, repositories));
+
 
 module.exports = routes
